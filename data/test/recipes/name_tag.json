@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  s",
+      " g ",
+      "   "
+    ],
+    "key": {
+      "g": {
+        "item": "gold_ingot"
+      },
+      "s": {
+        "item": "string"
+      }
+    },
+    "result": {
+      "item": "name_tag",
+      "count": 1
+    }
+  }
