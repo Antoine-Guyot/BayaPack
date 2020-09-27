@@ -1,3 +1,3 @@
 {
-    "values": ["minecraft:load"]
+    "values": ["minecraft:load","weapons:init"]
 }
