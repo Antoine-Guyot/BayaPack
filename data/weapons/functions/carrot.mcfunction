@@ -1,15 +1,15 @@
-# Ender Wand
-# execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["enderWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["enderWand"]}}}] run execute as @s run summon ender_pearl ^ ^ ^
-# scoreboard players reset @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["enderWand"]}}}] carrot
-
 # Fireball Wand
-execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] run execute as @s run summon minecraft:fireball ^ ^1 ^2 {ExplosionPower:1,direction:[0.0,0.0,0.0]}
+execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] run execute as @s run kill @e[type=fireball,tag=fireball]
+execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] run execute as @s run summon minecraft:fireball ^ ^1 ^2 {ExplosionPower:1,direction:[0.0,0.0,0.0],Tags:["fireball"]}
 scoreboard players reset @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] carrot
 
-# Rocket Wand
-# execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["rocketWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["rocketWand"]}}}] run execute as @s run summon minecraft:firework_rocket ^ ^ ^ {LifeTime:30,FireworksItem:{Count:1,tag:{Fireworks:{Flight:3,Explosions:[{Type:1,Flicker:0,Trail:0}]}}}}
-# scoreboard players reset @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["rocketWand"]}}}] carrot
+# Fireball Wand V2
+# execute at @p[scores={shoot1=1},nbt={SelectedItem:{tag:{FireWand:1b}}}] run summon armor_stand ^ ^ ^1 {Tags:["FireBall","Spell"],NoGravity:1b,Invisible:1b,Marker:1b}
+# execute at @p[scores={shoot1=1},nbt={SelectedItem:{tag:{FireWand:1b}}}] at @e[tag=FireBall,limit=1,sort=nearest] run tp @e[tag=FireBall,limit=1,sort=nearest] ~ ~0.02 ~ facing entity @p
+# execute if score @p shoot1 matches 1.. run scoreboard players set @p shoot1 0
+# execute at @e[tag=FireBall] run particle flame ~ ~1 ~ 0 0 0 0.01 25
+# execute at @e[tag=FireBall] run tp @e[tag=FireBall,limit=1,sort=nearest] ^ ^ ^-0.4
 
 # reset carrot
-execute at @a[scores={carrot=1..}] as @a[scores={carrot=1..}] run execute as @s run say right cliked!
+# execute at @a[scores={carrot=1..}] as @a[scores={carrot=1..}] run execute as @s run say carrot clic
 scoreboard players reset @a[scores={carrot=1..}] carrot
