@@ -1,6 +1,6 @@
 # Fireball Wand
 execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] run execute as @s run kill @e[type=fireball,tag=fireball]
-execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] run execute as @s run summon minecraft:fireball ^ ^1 ^2 {ExplosionPower:1,direction:[0.0,0.0,0.0],Tags:["fireball"]}
+execute at @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] as @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] run execute as @s run summon minecraft:fireball ^ ^1 ^2 {ExplosionPower:1,Tags:["fireball"]}
 scoreboard players reset @a[scores={carrot=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Tags:["fireballWand"]}}}] carrot
 
 # Fireball Wand V2
