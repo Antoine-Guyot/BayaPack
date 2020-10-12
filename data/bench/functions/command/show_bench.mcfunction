@@ -1,0 +1,1 @@
+effect give @e[tag=bench] glowing 300
