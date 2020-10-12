@@ -7,5 +7,5 @@ execute at @e[tag=benchSpawn] as @e[tag=benchSpawn] run execute as @s run summon
 kill @e[tag=benchSpawn]
 
 # REMOVE
-execute at @e[tag=removeAll] as @e[tag=removeAll] run execute as @s run kill @e[tag=bench,distance=0..3]
+execute at @e[tag=removeAll] as @e[tag=removeAll] run execute as @s run kill @e[tag=bench,distance=0..3,limit=1,sort=nearest]
 kill @e[tag=removeAll]
