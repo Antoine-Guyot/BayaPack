@@ -14,7 +14,6 @@
     },
     "result": {
         "item": "minecraft:knowledge_book",
-        "count": 1,
-        "tag": "{Recipes:[2]}"
+        "count": 1
     }
 }
