@@ -1,9 +1,0 @@
-{
-    "type": "smelting",
-    "ingredient": {
-      "tag": "food:flour_tag"
-    },
-    "result": "minecraft:bread",
-    "experience": 1,
-    "cookingtime": 150
-  }

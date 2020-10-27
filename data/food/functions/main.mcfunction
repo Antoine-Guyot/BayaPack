@@ -1,7 +1,7 @@
 # F3 + i -> get structure code
 
 # find correct items and summon an armor stand
-execute at @e[type=item,nbt={Item:{id:"minecraft:beetroot_seeds",tag:{Tags:["appleSeed"]},Count:1b}}] if block ~ ~-.5 ~ farmland run execute as @e[type=item,nbt={Item:{id:"minecraft:bone_meal",Count:3b}},limit=1,sort=nearest,distance=0..1] at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["appleTree"]}
+execute at @e[type=item,nbt={Item:{id:"minecraft:beetroot_seeds",tag:{Tags:["appleSeed"]},Count:1b}}] if block ~ ~-.5 ~ farmland run execute as @e[type=item,nbt={Item:{id:"minecraft:bone_meal",Count:3b}},limit=1,sort=nearest,distance=0..1] at @s run summon minecraft:armor_stand ~ ~-.2 ~ {Invisible:1b,NoGravity:1b,Tags:["appleTree"]}
 
 # delete items and summon apple trees
 execute as @e[tag=appleTree] at @s run kill @e[type=item,nbt={Item:{id:'minecraft:beetroot_seeds',tag:{Tags:["appleSeed"]},Count:1b}},sort=nearest,limit=1]
