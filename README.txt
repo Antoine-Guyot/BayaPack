@@ -8,3 +8,5 @@ DataPack test
         1713 Apple seed
     2 Weapons
         1721 Dague
+    3 CustomCraft
+        1731 lacrafteuse
