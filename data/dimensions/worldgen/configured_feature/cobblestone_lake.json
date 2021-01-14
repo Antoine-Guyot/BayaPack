@@ -1,0 +1,22 @@
+{
+    "config": {
+      "feature": {
+        "config": {
+          "state": {
+            "Properties": {
+              "level": "0"
+            },
+            "Name": "minecraft:cobblestone"
+          }
+        },
+        "type": "minecraft:lake"
+      },
+      "decorator": {
+        "config": {
+          "chance": 14
+        },
+        "type": "minecraft:water_lake"
+      }
+    },
+    "type": "minecraft:decorated"
+  }
