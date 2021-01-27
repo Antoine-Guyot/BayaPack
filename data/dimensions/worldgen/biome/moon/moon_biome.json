@@ -1,5 +1,7 @@
 {
-  "starts": [],
+  "starts": [
+    "dimensions:moon_crater"
+  ],
   "spawners": {
     "water_ambient": [],
     "ambient": [],
@@ -20,18 +22,21 @@
   "features": [
     [],
     [
-      "dimensions:cobblestone_lake"
+      "dimensions:moon/moon_lake"
     ],
     [],
     [],
     [],
     [],
-    [],
+    [
+      "dimensions:moon/cheese_vein",
+      "dimensions:moon/moon_steel_vein"
+    ],
     [],
     [],
     []
   ],
-  "scale": 0.1,
+  "scale": 0.15,
   "temperature": 0.5,
   "downfall": 0.5,
   "effects": {
